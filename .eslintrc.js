@@ -1,4 +1,7 @@
 module.exports = {
+  globals: {
+    server: true,
+  },
   root: true,
   parserOptions: {
     ecmaVersion: 2017,
@@ -9,5 +12,7 @@ module.exports = {
     browser: true
   },
   rules: {
+    "comma-dangle": ["error", "always-multiline"],
+    "no-underscore-dangle": ["error", { "allow": ["_super"] }]
   }
 };
