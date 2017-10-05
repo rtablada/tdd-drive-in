@@ -1,0 +1,23 @@
+<div class="section">
+  <div class="container">
+    <ul class="panel">
+      <li class="panel-heading">
+        <h2>Cars</h2>
+      </li>
+      {{#each model as |car|}}
+        <li data-test-car class="panel-block">
+          <span data-test-car-year>{{car.year}}</span> -
+          <span data-test-car-brand>{{car.brand}}</span>
+          <span data-test-car-series>{{car.series}}</span> |
+          <span data-test-car-color>{{car.color}}</span>
+        </li>
+      {{/each}}
+
+      <li class="panel-block">
+        {{#link-to "cars.new" class="button is-primary is-fullwidth" data-test-new-car=true}}
+          Add New Car
+        {{/link-to}}
+      </li>
+    </ul>
+  </div>
+</div>

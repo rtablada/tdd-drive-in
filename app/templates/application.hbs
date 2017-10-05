@@ -1,5 +1,32 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{#bulma-nav hasShadow=true}}
+  {{#bulma-nav-left}}
+    <h2 class="nav-item is-brand">
+      {{#link-to "index"}}
+        TDD Drive In
+      {{/link-to}}
+    </h2>
+  {{/bulma-nav-left}}
+
+  {{#bulma-nav-toggle onmousedown=(action toggleProperty 'toggleNav')}}
+    <span></span>
+    <span></span>
+    <span></span>
+  {{/bulma-nav-toggle}}
+
+  {{#bulma-nav-right isMenu=true}}
+    {{#link-to "cars" data-test-nav="cars" class="nav-item"}}
+      Cars
+    {{/link-to}}
+
+  {{/bulma-nav-right}}
+{{/bulma-nav}}
+
+{{#if toggleNav}}
+  {{#bulma-panel isHiddenDesktop=true isHiddenTablet=true isHiddenWidescreen=true}}
+    {{#link-to "cars" data-test-nav="cars" class="light panel-block"}}
+      Cars
+    {{/link-to}}
+  {{/bulma-panel}}
+{{/if}}
 
 {{outlet}}

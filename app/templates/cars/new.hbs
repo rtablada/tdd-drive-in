@@ -1,0 +1,45 @@
+<div class="section">
+  <div class="container">
+    <form class="card is-fullwidth" onsubmit={{action "saveCar"}}>
+      <header class="card-header">
+        <h2 class="card-header-title">New Car</h2>
+      </header>
+
+      <div class="card-content">
+
+        <p class="field">
+          <label class="label" for="car-brand">Brand</label>
+          {{input id="car-brand" data-test-car-brand=true
+            brand="car-brand" placeholder="Brand" class="input"
+            value=model.brand}}
+        </p>
+
+        <p class="field">
+          <label class="label" for="car-series">Series</label>
+          {{input id="car-series" data-test-car-series=true
+            series="car-series" placeholder="Series" class="input"
+            value=model.series}}
+        </p>
+
+        <p class="field">
+          <label class="label" for="car-color">Color</label>
+          {{input id="car-color" data-test-car-color=true
+            color="car-color" placeholder="Color" class="input"
+            value=model.color}}
+        </p>
+
+        <p class="field">
+          <label class="label" for="car-year">Year</label>
+          {{input id="car-year" data-test-car-year=true
+            year="car-year" placeholder="Year" class="input"
+            value=model.year}}
+        </p>
+
+        <div class="field">
+          <label for="" class="label"></label>
+          <button data-test-submit class="button is-fullwidth is-primary" type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

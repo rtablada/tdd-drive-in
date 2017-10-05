@@ -1,5 +1,4 @@
 export default function () {
-
   // These comments are here to help you get started. Feel free to delete them.
 
   /*
@@ -23,4 +22,10 @@ export default function () {
 
     http://www.ember-cli-mirage.com/docs/v0.3.x/shorthands/
   */
+
+  this.get('/cars');
+  this.post('/cars');
+  this.get('/cars/:id');
+  this.put('/cars/:id'); // or this.patch
+  this.del('/cars/:id');
 }
