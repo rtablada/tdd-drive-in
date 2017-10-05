@@ -1,0 +1,38 @@
+<div class="section">
+  <div class="container">
+    <div class="card is-fullwidth">
+      <header class="card-header">
+        <h2 class="card-header-title">
+          <div class="level is-fullwidth">
+            <div class="level-left">
+              Car Details
+            </div>
+
+            <div class="level-right">
+              <button class="button is-danger" onclick={{action "deleteCar"}} data-test-delete>Delete</button>
+            </div>
+          </div>
+        </h2>
+      </header>
+
+      <div class="card-content">
+        <p>
+          <strong>Brand: </strong>
+          <span data-test-car-brand>{{model.brand}}</span>
+        </p>
+        <p>
+          <strong>Series: </strong>
+          <span data-test-car-series>{{model.series}}</span>
+        </p>
+        <p>
+          <strong>Color: </strong>
+          <span data-test-car-color>{{model.color}}</span>
+        </p>
+        <p>
+          <strong>Year: </strong>
+          <span data-test-car-year>{{model.year}}</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,13 @@
+.level.is-fullwidth {
+  width: 100%;
+}
+
+.sr-only {
+  display: block;
+  position: fixed;
+  width: 0;
+  height: 0;
+  left: 100%;
+}
+
 @import "bulma";

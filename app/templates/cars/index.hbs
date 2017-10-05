@@ -6,10 +6,21 @@
       </li>
       {{#each model as |car|}}
         <li data-test-car class="panel-block">
-          <span data-test-car-year>{{car.year}}</span> -
-          <span data-test-car-brand>{{car.brand}}</span>
-          <span data-test-car-series>{{car.series}}</span> |
-          <span data-test-car-color>{{car.color}}</span>
+          <span class="level is-fullwidth">
+            <span class="level-left">
+              <span data-test-car-year>{{car.year}}</span> -
+              <span data-test-car-brand>{{car.brand}}</span>
+              <span data-test-car-series>{{car.series}}</span> |
+              <span data-test-car-color>{{car.color}}</span>
+            </span>
+
+            <div class="level-right">
+              {{#link-to "cars.detail" car.id class="panel-icon" data-test-car-detail=car.id}}
+                <div class="sr-only">View Details</div>
+                <span class="fa fa-angle-right"></span>
+              {{/link-to}}
+            </div>
+          </span>
         </li>
       {{/each}}
 

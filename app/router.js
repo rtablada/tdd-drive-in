@@ -10,6 +10,10 @@ Router.map(function () {
   this;
   this.route('cars', function () {
     this.route('new');
+
+    this.route('detail', {
+      path: '/:id',
+    });
   });
 });
 
